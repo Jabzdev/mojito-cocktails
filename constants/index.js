@@ -102,10 +102,11 @@ const goodLists = [
 
 const storeInfo = {
     heading: "Where to Find Us",
-    address: "456, Raq Blvd. #404, Los Angeles, CA 90210",
+    address: "221B, Baker Street #2F, London, NW1 6XE, UK",
     contact: {
         phone: "(555) 987-6543",
-        email: "hello@jsmcocktail.com",
+        email: "abduljabarcodes@gmail.com",
+        url: "mailto:abduljabarcodes@gmail.com"
     },
 };
 
@@ -120,7 +121,7 @@ const socials = [
     {
         name: "Instagram",
         icon: "/images/insta.png",
-        url: "#",
+        url: "https://www.instagram.com/jabz.dev?igsh=NzZnZzcwYWg5ZA==",
     },
     {
         name: "X (Twitter)",
@@ -134,7 +135,7 @@ const socials = [
     },
 ];
 
-const sliderLists = [
+const allCocktails = [
     {
         id: 1,
         name: "Classic Mojito",
@@ -179,5 +180,5 @@ export {
     openingHours,
     storeInfo,
     socials,
-    sliderLists,
+    allCocktails,
 };
