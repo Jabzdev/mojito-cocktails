@@ -39,13 +39,13 @@ const Contact = () => {
 
                 <div>
                     <h3>Visit Our Bar</h3>
-                    <p>456, Raq Blvd. #404, Los Angeles, CA 90210</p>
+                    <p>221B, Baker Street #2F, London, NW1 6XE, UK</p>
                 </div>
 
                 <div>
                     <h3>Contact Us</h3>
                     <p>(555) 987-6543</p>
-                    <p>hello@jsmcocktail.com</p>
+                    <a href={"mailto:abduljabarcodes@gmail.com"}><p>abduljabarcodes@gmail.com</p></a>
                 </div>
 
                 <div>

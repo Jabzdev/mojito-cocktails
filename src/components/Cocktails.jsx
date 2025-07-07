@@ -1,6 +1,8 @@
-import { useGSAP } from '@gsap/react'
+import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { cocktailLists, mockTailLists } from '../../constants/index.js'
+import { cocktailLists, mockTailLists } from '../../constants/index.js';
+
+gsap.registerPlugin(useGSAP);
 
 const Cocktails = () => {
     useGSAP(() => {
@@ -11,26 +13,18 @@ const Cocktails = () => {
                 end: 'bottom 80%',
                 scrub: true,
             }
-        })
+        });
 
-        parallaxTimeline
-            .from('#c-left-leaf', {
-                x: -100, y: 100
-            })
-            .from('#c-right-leaf', {
-                x: 100, y: 100
-            })
-    })
+        // Removed leaf animation to eliminate scroll issue
+    });
 
     return (
-        <section id="cocktails" className="noisy">
-            <img src="/images/cocktail-left-leaf.png" alt="l-leaf" id="c-left-leaf" />
-            <img src="/images/cocktail-right-leaf.png" alt="r-leaf" id="c-right-leaf" />
+        <section id="cocktails" className="noisy overflow-x-hidden">
+            {/* Leaf images removed */}
 
             <div className="list">
                 <div className="popular">
                     <h2>Most popular cocktails:</h2>
-
                     <ul>
                         {cocktailLists.map(({ name, country, detail, price }) => (
                             <li key={name}>
@@ -46,7 +40,6 @@ const Cocktails = () => {
 
                 <div className="loved">
                     <h2>Most loved mocktails:</h2>
-
                     <ul>
                         {mockTailLists.map(({ name, country, detail, price }) => (
                             <li key={name}>
@@ -61,7 +54,7 @@ const Cocktails = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Cocktails
+export default Cocktails;
